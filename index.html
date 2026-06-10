@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDDYHUB PREMIUM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <div class="hero">
+            <img src="https://plus.unsplash.com/premium_photo-1731518243199-fe1e3d501b2b?q=80&w=1016&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Music Illustration">
+        </div>
+
+        <div class="content">
+            <h1> EDDYHUB Premium</h1>
+
+            <p>
+                Listen to millions of songs world wide anywhere you are 
+                with EDDYHUB premium subscription
+            </p>
+
+            <div class="plan-box">
+                <div class="plan-info">
+                    <div class="icon">🎵</div>
+
+                    <div>
+                        <h3>Monthly Plan</h3>
+                        <span>$99:99/month</span>
+                    </div>
+                </div>
+
+                <a href="#">Change</a>
+            </div>
+
+            <button id="paymentBtn">
+                Proceed to Payment
+            </button>
+
+            <button class="cancel-btn">
+                Cancel Order
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+const paymentBtn = document.getElementById("paymentBtn");
+
+paymentBtn.addEventListener("click", () => {
+    paymentBtn.textContent = "Processing...";
+    paymentBtn.disabled = true;
+
+    setTimeout(() => {
+        paymentBtn.textContent = "Payment Successful ✓";
+    }, 1500);
+});
+
+document.querySelector(".cancel-btn")
+.addEventListener("click", () => {
+    alert("Order Cancelled");
+});
+</script>
+</body>
+</html>
